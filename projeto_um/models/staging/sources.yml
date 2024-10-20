@@ -13,12 +13,12 @@ sources:
         columns:
           - name: cliente_id
             description: "Chave extrangeira do cliente que fez a avaliação"
-            data_test:
-              - name: not_null
+            data_tests:
+              - not_null
           - name: produto_id
             description: "Chave extrangeira do produto avaliado"
-            data_test:
-              - name: not_null
+            data_tests:
+              - not_null
           - name: nota
             description: "Nota da avaliação"
           - name: comentario
@@ -31,12 +31,12 @@ sources:
         columns:
           - name: cliente_id
             description: "Chave extrangeira do cliente que fez a compra"
-            data_test:
-              - name: not_null
+            data_tests:
+              - not_null
           - name: produto_id
             description: "Chave extrangeira do produto comprado"
-            data_test:
-              - name: not_null
+            data_tests:
+              - not_null
           - name: quantidade
             description: "Quantidade do produto comprado"
           - name: data_adicionado
@@ -47,9 +47,9 @@ sources:
         columns:
           - name: id
             description: "Chave primária da categoria"
-            data_test:
-              - name: not_null
-              - name: unique
+            data_tests:
+              - not_null
+              - unique
           - name: nome
             description: "Nome da categoria"
 
@@ -58,9 +58,9 @@ sources:
         columns:
           - name: id
             description: "Chave primária do cliente"
-            data_test:
-              - name: not_null
-              - name: unique
+            data_tests:
+              - not_null
+              - unique
           - name: nome
             description: "Nome do cliente"
           - name: email
@@ -75,12 +75,12 @@ sources:
         columns:
           - name: pedido_id
             description: "Chave extrangeira do pedido"
-            data_test:
-              - name: not_null
+            data_tests:
+              - not_null
           - name: produto_id
             description: "Chave extrangeira do produto"
-            data_test:
-              - name: not_null
+            data_tests:
+              - not_null
           - name: quantidade
             description: "Quantidade do produto"
           - name: preco_unitario
@@ -93,13 +93,13 @@ sources:
         columns:
           - name: id
             description: "Chave primária do pagamento"
-            data_test:
-              - name: not_null
-              - name: unique
+            data_tests:
+              - not_null
+              - unique
           - name: pedido_id
             description: "Chave extrangeira do pedido"
-            data_test:
-              - name: not_null
+            data_tests:
+              - not_null
           - name: valor
             description: "Valor do pagamento"
           - name: metodo
@@ -114,17 +114,17 @@ sources:
         columns:
           - name: id
             description: "Chave primária do pedido"
-            data_test:
-              - name: not_null
-              - name: unique
+            data_tests:
+              - not_null
+              - unique
           - name: cliente_id
             description: "Chave extrangeira do cliente"
-            data_test:
-              - name: not_null
+            data_tests:
+              - not_null
           - name: endereco_id
             description: "Chave extrangeira do endereço de entrega"
-            data_test:
-              - name: not_null
+            data_tests:
+              - not_null
           - name: data_pedido
             description: "Data do pedido"
           - name: status
@@ -135,17 +135,17 @@ sources:
         columns:
           - name: id
             description: "Chave primária do produto"
-            data_test:
-              - name: not_null
-              - name: unique
+            data_tests:
+              - not_null
+              - unique
           - name: nome
             description: "Nome do produto"
           - name: descricao
             description: "Descrição do produto"
           - name: categoria_id
             description: "Chave extrangeira da categoria do produto"
-            data_test:
-              - name: not_null
+            data_tests:
+              - not_null
           - name: preco
             description: "Preço do produto"
           - name: marca
