@@ -65,6 +65,8 @@ sources:
             description: "Nome do cliente"
           - name: email
             description: "Email do cliente"
+            data_tests:
+              - valid_email
           - name: telefone
             description: "Telefone do cliente"
           - name: data_registro
