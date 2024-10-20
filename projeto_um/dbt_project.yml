@@ -1,0 +1,39 @@
+
+name: 'projeto_um'
+version: '1.0.0'
+
+profile: 'projeto_um'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  projeto_um:
+
+    staging:
+      schema: stg
+      materialized: table
+      tags: '[staging]'
+
+    intermediate:
+      schema: int
+      materialized: ephemeral
+      tags: '[intermediate]'
+
+    marts:
+      schema: marts
+      materialized: table
+      tags: '[marts]'
+
+seeds:
+  projeto_um:
+    schema: raw
+    tags: ['seed']
